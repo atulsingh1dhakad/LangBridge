@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:langbridge/screens/Abount%20Screen.dart';
+import 'package:langbridge/screens/AboutScreen.dart';
+import 'package:langbridge/screens/BlogScreen.dart';
 import 'package:langbridge/screens/homescreen.dart';
 
 class Mainwrapper extends StatefulWidget {
@@ -14,8 +15,9 @@ class _MainWrapperState extends State<Mainwrapper> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    LanguageTranslatorScreen(), // Home screen
-    aboutscreen() // Profile screen
+    LanguageTranslatorScreen(),
+    Blogscreen(),// Home screen
+    AboutScreen() // Profile screen
   ];
 
   @override
@@ -38,12 +40,16 @@ class _MainWrapperState extends State<Mainwrapper> {
           currentIndex: _selectedIndex,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, size: 21), // Home Icon
-              label: 'Home',
+              icon: Icon(Icons.translate_rounded, size: 21), // Home Icon
+              label: 'Trans',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person, size: 21), // Profile Icon
-              label: 'Profile',
+              icon: Icon(Icons.insert_drive_file_outlined, size: 21), // Home Icon
+              label: 'Blog',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.info_outline, size: 21), // Profile Icon
+              label: 'About',
             ),
           ],
           backgroundColor: Colors.grey[200], // Background color for the BottomNavigationBar

@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:langbridge/mainwrapper.dart';
 class MyApp extends StatelessWidget {
@@ -35,10 +36,10 @@ class TranslateScreen extends StatelessWidget {
           ),
           Positioned(
             top: 50,
-            right: -150,
+            right: -160,
             child: Container(
               width: 300,
-              height: 300,
+              height: 290,
               decoration: const BoxDecoration(
                 color: Colors.orangeAccent,
                 shape: BoxShape.circle,
@@ -54,64 +55,125 @@ class TranslateScreen extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    CircleAvatar(
-                      radius: 40,
-                      backgroundColor: Colors.blue,
-                      child: const Icon(
-                        Icons.translate_rounded,
-                        color: Colors.white,
-                        size: 40,
-                      ),
-                    ),
-                    Positioned(
-                      right: 0,
-                      child: CircleAvatar(
-                        radius: 20,
-                        backgroundColor: Colors.orange,
-                        child: const Icon(
-                          Icons.language,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                      ),
-                    ),
+                    Image.asset('assets/images/logo1.png'),
                   ],
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 0),
               // Text
-              const Text(
-                "Welcome to LangBridge",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      const Text(
+                        "Here you can translate English Language to ",
+                        style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              const SizedBox(height: 20),
-              // Pagination indicator
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    width: 10,
-                    height: 10,
-                    decoration: const BoxDecoration(
+              SizedBox(height: 10,),
+              AnimatedTextKit(
+                repeatForever: true,
+                animatedTexts: [
+                  TyperAnimatedText(
+                    'Hindi',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
                       color: Colors.blue,
-                      shape: BoxShape.circle,
                     ),
+                    speed: const Duration(milliseconds: 100),
                   ),
-                  const SizedBox(width: 8),
-                  Container(
-                    width: 10,
-                    height: 10,
-                    decoration: const BoxDecoration(
-                      color: Colors.blueGrey,
-                      shape: BoxShape.circle,
+                  TyperAnimatedText(
+                    'Marathi',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
                     ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Gujarati',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Tamil',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Kannada',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Telugu',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Bengali',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Malayalam',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Punjabi',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                  TyperAnimatedText(
+                    'Odia',
+                    textStyle: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    speed: const Duration(milliseconds: 100),
                   ),
                 ],
               ),
-
             ],
           ),
           GestureDetector(
