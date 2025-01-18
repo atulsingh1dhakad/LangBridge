@@ -64,7 +64,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     _buildTeamMemberCard("Pradhyum Garashya", "https://raw.githubusercontent.com/RohanMalakar/Langbridge/refs/heads/main/client/src/assets/Images/Pradhyum.jpg"),
                     _buildTeamMemberCard("Brajraj Mishra", "https://raw.githubusercontent.com/RohanMalakar/Langbridge/refs/heads/main/client/src/assets/Images/Brajraj-Mishra.jpg"),
                     _buildTeamMemberCard("Tanuj Jain", "https://github.com/RohanMalakar/Langbridge/blob/main/client/src/assets/Images/Tanuj-jain.jpg?raw=true"),
-                    _buildTeamMemberCard("Atul Singh Dhakad", "assets/images/atulsingh.png"),
+                    _buildTeamMemberCard("Atul Singh Dhakad", "https://github.com/atulsingh1dhakad/LangBridge/blob/master/assets/images/atulsingh.png?raw=true"),
                   ],
                 ),
               ),
